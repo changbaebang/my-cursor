@@ -1,0 +1,17 @@
+---
+description: >-
+  QA 반영·qa 브랜치에 feat merge·qa push 요청 시 ~/.cursor/skills/qa-branch-reflect
+  및 /cb:qa-branch-reflect MUST. 작업 레포에 워크플로 복제 금지.
+alwaysApply: false
+---
+
+# QA branch reflect
+
+사용자가 **QA 반영**, **qa에 feat 병합**, **qa push**, **nqa 배포 전 qa 업데이트**를 요청하면:
+
+1. **MUST** read `~/.cursor/skills/qa-branch-reflect/SKILL.md`
+2. **MUST** follow `~/.cursor/commands/cb/qa-branch-reflect.md`
+3. **MUST NOT** `git push --force` to `qa` or `main` unless 사용자가 명시
+4. 수정 위치: `~/.cursor/` (개인). `your-frontend-monorepo` 팀 스킬/규칙에 이 워크플로 추가하지 않음
+
+기본 순서: `main` fetch/pull → 로컬 `qa` 삭제 → `origin/qa` 체크아웃 → `origin/<feat>` merge → `git push origin qa`

@@ -1,0 +1,36 @@
+# Secrets & local state
+.env
+*.env
+!*.env.example
+client_secret.json
+credentials.json
+credentials.enc
+.token_cache*
+mcp.json
+
+# Personal runtime / dedupe
+scripts/cb/*-dedupe.json
+skills/slack-pr-review/.env
+
+# Private skills (local only — sync-to-repo.sh에서도 제외)
+skills/kr-stock-analysis/
+skills/kr-stock-dual-strategy/
+skills/us-daily-portfolio-check/
+.cursor/private/
+private/
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Accidental full .cursor dump
+projects/
+chats/
+extensions/
+worktrees/
+plugins/
+skills-cursor/
+ai-tracking/
+statsig-cache.json

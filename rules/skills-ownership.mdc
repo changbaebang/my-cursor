@@ -1,0 +1,63 @@
+---
+description: 스킬·규칙 수정 위치 — 개인(~/.cursor) vs 작업 레포 vs vendor 임시. 스킬 업데이트 요청 시 MUST.
+alwaysApply: true
+---
+
+# 스킬·규칙 소유권 (SSOT)
+
+사용자가 **스킬 업데이트**, **규칙 추가**, **/cb:* 반영**을 요청하면 **작업 레포가 아니라 개인 설정**을 수정한다.  
+이 구분이 여러 번 혼동되었으므로 아래를 **MUST**로 따른다.
+
+## 3계층
+
+| 계층 | 위치 | 수명 | 에이전트 기본 동작 |
+|------|------|------|-------------------|
+| **팀 (작업 레포)** | `your-frontend-monorepo` — `.claude/skills/`, `.cursor/rules/`, `AGENTS.md`, `packages/*/AGENTS.md` | 영구·팀 공유 | **기본 수정 금지**. 팀 기여 PR이 명시될 때만 |
+| **개인 (영구)** | `~/.cursor/` — `commands/cb/`, `skills/`, `rules/`, `docs/` | 영구·개인 | **스킬/워크플로 업데이트는 여기** |
+| **Vendor (임시)** | `~/.cursor/vendor/` + `skills/*-vendor/` + `vendor-lock.json` | 티켓 단위 | 작업 특화·**teardown 시 래퍼 삭제** |
+
+백업·동기화: `~/Codes/my-cursor` — `/cb:my-cursor-sync` (사용자 요청 시 commit/push).
+
+## MUST — "스킬 업데이트" 해석
+
+1. **수정 경로**: `~/.cursor/commands/cb/*.md`, `~/.cursor/skills/*/SKILL.md`, `~/.cursor/rules/*.mdc`
+2. **하지 않음**: `your-frontend-monorepo/.claude/skills/` 에 개인 워크플로·슬랙·Jira·vendor 내용 추가
+3. **예외 (작업 레포 허용)**: 팀 전체 표준 변경 — router/storage/feature-flag 가이드, `AGENTS.md`에 **개인 스킬은 ~/.cursor** 한 줄 안내
+4. **예외 (vendor)**: 외부 플러그인 clone → `~/.cursor/vendor/`; 래퍼만 `skills/<name>-vendor/` — `/cb:vendor-skills`
+
+## 팀 레포 스킬 (참고만·손대지 않음)
+
+작업 레포에 이미 있는 것 (대표):
+
+- `.claude/skills/feature-flag-guide`, `router-guide`, `storage-guide`
+- `AGENTS.md`, `CLAUDE.md`, 앱별 `AGENTS.md`
+
+→ 버그 수정·팀 합의 리팩터가 **아니면** 개인 repo로 옮기거나 덮어쓰지 않는다.
+
+## Vendor 생명주기
+
+```text
+/cb:vendor-skills install <plugin> <JIRA>
+  → ~/.cursor/vendor/...  (clone)
+  → ~/.cursor/skills/<plugin>-vendor/SKILL.md  (얇은 래퍼)
+  → vendor-lock.json
+
+/cb:vendor-skills teardown <JIRA>
+  → 래퍼 스킬 삭제
+  → lock 항목 제거
+  → vendor/ clone은 사용자 확인 후 삭제 (선택)
+```
+
+Confluence/Jira가 작업 SSOT; vendor 스킬 md는 **실행 런북**일 뿐.
+
+## 작업 산출물 vs 설정
+
+| 종류 | 위치 |
+|------|------|
+| 앱 코드·PR | `your-frontend-monorepo` |
+| 블로그 초안 | `~/docs/blog-drafts` |
+| 개인 자동화·리뷰 톤·슬랙 게이트 | `~/.cursor` → `my-cursor` |
+
+## 응답 시 한 줄 (권장)
+
+스킬/규칙 변경 후: "반영 위치: `~/.cursor/...` (개인). 작업 레포 스킬은 수정하지 않았습니다."
