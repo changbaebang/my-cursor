@@ -15,7 +15,7 @@ Full rules: read `~/.cursor/commands/cb/work-start.md` and follow exactly.
 
 ## Quick rules
 
-- Branch: `feat/PROJ-123-legacy-shared-heart-api` via `~/.cursor/scripts/cb/branch-name.sh`.
+- Branch: `feat/PROJ-123-legacy-shared-example-api` via `~/.cursor/scripts/cb/branch-name.sh`.
 - Base: epic branch for subtasks (e.g. heart 1043), not `main` unless triage says so.
 - Scope grep before coding; Jira Start only if user asks.
 - Do not commit/PR unless user requests.

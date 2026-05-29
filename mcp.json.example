@@ -2,13 +2,13 @@
   "mcpServers": {
     "atlassian": {
       "type": "sse",
-      "url": "https://user.com/v1/mcp"
+      "url": "https://mcp.atlassian.com/v1/mcp"
     },
     "Figma": {
-      "url": "https://user.com/mcp"
+      "url": "https://mcp.figma.com/mcp"
     },
     "github": {
-      "url": "https://user.com/mcp/",
+      "url": "https://api.githubcopilot.com/mcp/",
       "headers": {
         "Authorization": "github_pat_YOUR_TOKEN_HERE"
       }

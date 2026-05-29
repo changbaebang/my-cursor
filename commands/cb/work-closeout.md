@@ -82,7 +82,7 @@ Cloud: `example-org`
 - Next subtask → Start (`21`) on e.g. `PROJ-123`
 - Parent epic: all children Done → consider epic comment (no auto-close unless asked)
 
-Browse URL: `https://user.com/browse/<KEY>`  
+Browse URL: `https://jira.example.com/browse/<KEY>`  
 (또는 `https://example-org.atlassian.net/browse/<KEY>`)
 
 ## Step 6 — Output (Korean)

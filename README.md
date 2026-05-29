@@ -4,7 +4,7 @@
 
 개인 Cursor 설정 — **skills**, **`/cb:*` 슬래시 커맨드**, **scripts** — 를 GitHub에 백업·공유하는 repo입니다.
 
-- **Remote:** https://user.com/changbaebang/my-cursor
+- **Remote:** https://github.com/changbaebang/my-cursor
 - **설치:** [SETUP.md](./SETUP.md)
 - **동기화:** `/cb:my-cursor-sync` 또는 `./scripts/sync-to-repo.sh`
 
@@ -28,7 +28,7 @@
 ## 빠른 시작
 
 ```bash
-git clone git@user.com:changbaebang/my-cursor.git ~/Codes/my-cursor
+git clone git@github.com:changbaebang/my-cursor.git ~/Codes/my-cursor
 cd ~/Codes/my-cursor
 ./install.sh
 ```
@@ -64,7 +64,7 @@ Cursor에서 `/cb:guide` 로 전체 목록 확인.
 Cursor 관련 변경 커밋 시 **항상** co-author:
 
 ```text
-Co-authored-by: Cursor <cursoragent@user.com>
+Co-authored-by: Cursor <cursoragent@cursor.com>
 ```
 
 ```bash

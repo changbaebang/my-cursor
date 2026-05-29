@@ -56,7 +56,7 @@ node "$HOME/.cursor/skills/slack-pr-review/scripts/parse-slack-url.mjs" "<permal
 | B | `slack_search_public_and_private` — `from:<user_id>` + 키워드 | 담당자·요청자 발화 |
 | C | `slack_read_channel` — 앵커 채널, 앵커 전후 시간대(가능하면) | 같은 채널 맥락 |
 | D | `slack_search_users` — 스레드에 나온 이름·이메일 | `user_id` 확정 |
-| E | `slack_search_channels` — 게시 대상 채널 | `channel_id` (예: `#29-team-frontend-스몰톡`) |
+| E | `slack_search_channels` — 게시 대상 채널 | `channel_id` (예: `#your-team-frontend-스몰톡`) |
 
 검색 쿼리 예: `PROJ-123`, `Header Footer GNB`, `Eng OKR`, `치훈 일정`.
 
@@ -64,8 +64,8 @@ node "$HOME/.cursor/skills/slack-pr-review/scripts/parse-slack-url.mjs" "<permal
 
 ### 3. 외부 링크 (있을 때)
 
-- **Jira** (`M29CM*`, `M29CMFEP-*` 등): Atlassian MCP `getJiraIssue` — cloudId `your-atlassian-cloud-id`. 제목·설명·담당자·상태·댓글. **비어 있으면** “티켓 본문 없음”을 업무 정의에 명시.
-- **Confluence** (`user.com`): Atlassian MCP `getConfluencePage` — Jira description의 wiki 링크 전부 읽기.
+- **Jira** (`PROJ-*`, `PROJ-EPIC-*` 등): Atlassian MCP `getJiraIssue` — cloudId `your-atlassian-cloud-id`. 제목·설명·담당자·상태·댓글. **비어 있으면** “티켓 본문 없음”을 업무 정의에 명시.
+- **Confluence** (`wiki.example.com`): Atlassian MCP `getConfluencePage` — Jira description의 wiki 링크 전부 읽기.
 - **Repo docs** (`docs/workstreams/…`, README): `Read` / `Glob` — Jira·Confluence에 나온 경로.
 - **Figma / PR**: URL이 있으면 읽기만 (코드 리뷰는 `slack-pr-review`로 분기).
 
@@ -158,10 +158,10 @@ node "$HOME/.cursor/skills/slack-pr-review/scripts/parse-slack-url.mjs" "<permal
 | 조건 | 동작 |
 |------|------|
 | 사용자 **확인 전** | §4 업무 정의 + §6 메시지 초안만 출력 |
-| “보내줘” / `--post` / 확인 후 | MCP `slack_send_message` — `channel_id`는 `--channel` 또는 기본 `C0000000000` (#29-team-frontend-스몰톡) |
+| “보내줘” / `--post` / 확인 후 | MCP `slack_send_message` — `channel_id`는 `--channel` 또는 기본 `C0000000000` (#your-team-frontend-스몰톡) |
 | 게시 후 | 사용자에게 **message_link** 반드시 전달 |
 
-**게시 채널 기본값:** `#29-team-frontend-스몰톡` (`C0000000000`). 앵커가 다른 팀 채널이면 사용자에게 확인.
+**게시 채널 기본값:** `#your-team-frontend-스몰톡` (`C0000000000`). 앵커가 다른 팀 채널이면 사용자에게 확인.
 
 ### 8. 답변 follow-up (같은 스레드 permalink 재사용)
 
@@ -261,7 +261,7 @@ Phase B — 준비 (답변·Jira 업데이트 후)
 
 ## 예시
 
-**입력:** `https://user.com/archives/C0000000000/p1779163206882539`
+**입력:** `https://your-org.slack.com/archives/C0000000000/p0000000000000000`
 
 **기대:** Eng OKR · Header/Footer/GNB · 목요일 일정 약속 · PROJ-123 빈 티켓 → 담당자 변치훈 → 스몰톡 채널에 일정 요청 초안 → 확인 후 게시.
 

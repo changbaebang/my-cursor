@@ -54,8 +54,8 @@ getJiraIssue PROJ-xxxx
 
 ### 실행 전략
 
-- **베이스 브랜치**: e.g. `feat/PROJ-123-remove-heart-service`
-- **작업 브랜치**: `feat/PROJ-123-legacy-shared-heart-api`
+- **베이스 브랜치**: e.g. `feat/PROJ-123-remove-example-service`
+- **작업 브랜치**: `feat/PROJ-123-legacy-shared-example-api`
 - **예상 PR 수**: N
 - **커밋 단위 제안**: bullet (1 PR = 1~3 logical commits)
 
@@ -107,5 +107,5 @@ getJiraIssue PROJ-xxxx
 ```text
 /cb:work-triage PROJ-123
 /cb:work-triage 6952
-/cb:work-triage https://user.com/YourOrg-Developers/your-frontend-monorepo/pull/6952
+/cb:work-triage https://github.com/your-org/your-frontend-monorepo/pull/1234
 ```

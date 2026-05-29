@@ -21,7 +21,7 @@ argument-hint: '[scan|pick|open] [--days N]'
 **발행 글 SSOT (겹침 체크):**
 
 ```text
-https://changbaebang.github.io/
+https://your-username.github.io/
 ```
 
 발행 초안(`YYYY-MM-DD-<slug>.md`)과 분리한다.  
@@ -45,10 +45,10 @@ https://changbaebang.github.io/
 
 | 카테고리 | 우선 소스 |
 |----------|-----------|
-| Google Web/Chrome | `user.com/blog`, `user.com` |
-| Google Cloud | `user.com/blog` |
-| Azure | `user.com/azure`, Microsoft Build/Azure announcements |
-| React | `react.dev/blog`, `user.com/facebook/react/releases` |
+| Google Web/Chrome | `blog.google`, `developers.google.com` |
+| Google Cloud | `cloud.google.com/blog` |
+| Azure | `azure.microsoft.com`, Microsoft Build/Azure announcements |
+| React | `react.dev/blog`, `github.com/facebook/react/releases` |
 | GeekNews | `news.hada.io` (시그널용, SSOT 아님) |
 
 GeekNews는 **링크 허브**로만 사용한다.  
@@ -121,7 +121,7 @@ tags: [blog, radar, topics]
 - ...
 
 ## 기존 글과 연결
-- [관련 발행 글](https://changbaebang.github.io/...)
+- [관련 발행 글](https://your-username.github.io/...)
 ```
 
 ---
@@ -131,7 +131,7 @@ tags: [blog, radar, topics]
 ### Step 1 — scan
 
 1. 소스별 최근 `--days` 항목 수집
-2. changbaebang.github.io 최근 글 제목 확인 (겹침 방지)
+2. your-username.github.io 최근 글 제목 확인 (겹침 방지)
 3. 후보 5~7개 선별 (`GO/MAYBE/PASS`)
 4. `YYYY-MM-DD-topic-radar.md` 작성 또는 갱신
 

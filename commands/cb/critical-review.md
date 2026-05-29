@@ -99,7 +99,7 @@ If no findings:
 ```text
 /cb:critical-review
 /cb:critical-review 6934
-/cb:critical-review https://user.com/org/repo/pull/6934
+/cb:critical-review https://github.com/your-org/your-repo/pull/1234
 ```
 
 ## Language

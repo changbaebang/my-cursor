@@ -17,5 +17,5 @@ Full rules: read `~/.cursor/commands/cb/intake.md` and follow exactly.
 
 - Output: summary, scope, subtask table, AC, Jira description paste block — **Korean**.
 - Do **not** write Jira until user confirms.
-- Large work → slice like heart epic (`examples/heart-migration.md`).
+- Large work → slice like example epic (`docs/your-epic-example.md`).
 - Next: `/cb:work-triage <key>`.

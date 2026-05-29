@@ -11,7 +11,7 @@ argument-hint: '[--push]'
 # /cb:my-cursor-sync
 
 **스킬:** `skills/my-cursor-sync/SKILL.md`  
-**Repo:** https://user.com/changbaebang/my-cursor
+**Repo:** https://github.com/changbaebang/my-cursor
 
 ## Steps
 

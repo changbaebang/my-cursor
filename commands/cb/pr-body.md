@@ -64,7 +64,7 @@ Use diff/commits to write factual `### 🛠️ 변경 사항` bullets.
 - Extract from PR title: `\b([A-Z][A-Z0-9]*-\d+)\b`
 - Keep key exactly (no truncation). `PROJ-123` ≠ `CMCCF-1447`.
 - Multiple keys: prefer `M29*` prefix, else longest match.
-- URL: `https://user.com/browse/<JIRA_KEY>`
+- URL: `https://jira.example.com/browse/<JIRA_KEY>`
 
 ## Tier (strict)
 
@@ -154,5 +154,5 @@ Paste final markdown for the five sections in order.
 
 ```text
 /cb:pr-body 6934
-/cb:pr-body https://user.com/YourOrg-Developers/your-frontend-monorepo/pull/6934
+/cb:pr-body https://github.com/your-org/your-frontend-monorepo/pull/1234
 ```

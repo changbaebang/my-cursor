@@ -13,19 +13,19 @@ argument-hint: '<jira-key> <branch-slug> [base-branch]'
 ## Arguments
 
 1. **Jira key** (required): `PROJ-123`
-2. **branch slug** (required): `legacy-shared-heart-api` (소문자·하이픈)
+2. **branch slug** (required): `legacy-shared-example-api` (소문자·하이픈)
 3. **base branch** (optional): default from `/cb:work-triage` or epic branch
 
 Derived branch name:
 
 ```text
-feat/PROJ-123-legacy-shared-heart-api
+feat/PROJ-123-legacy-shared-example-api
 ```
 
 Helper:
 
 ```bash
-~/.cursor/scripts/cb/branch-name.sh PROJ-123 legacy-shared-heart-api
+~/.cursor/scripts/cb/branch-name.sh PROJ-123 legacy-shared-example-api
 ```
 
 ## Preconditions
@@ -40,7 +40,7 @@ Helper:
 
 | 상황 | 베이스 |
 |------|--------|
-| Epic 하위 (heart, 순환참조) | `feat/PROJ-123-remove-heart-service` 등 epic 브랜치 |
+| Epic 하위 (example, 순환참조) | `feat/PROJ-123-remove-example-service` 등 epic 브랜치 |
 | Hotfix / 단독 | `main` or user-specified |
 | Unclear | Ask once; do not guess `main` if triage said epic |
 
@@ -52,7 +52,7 @@ git pull origin <base>
 ### 2) Create branch
 
 ```bash
-git checkout -b feat/PROJ-123-legacy-shared-heart-api
+git checkout -b feat/PROJ-123-legacy-shared-example-api
 ```
 
 Only run if user asked to create branch OR `/cb:work-start` explicitly includes "브랜치 만들어".
@@ -77,8 +77,8 @@ Record count; AC target **0** for migration.
 ```markdown
 ## work-start: PROJ-123
 
-- [ ] 브랜치: `feat/PROJ-123-legacy-shared-heart-api`
-- [ ] 베이스: `feat/PROJ-123-remove-heart-service` @ <sha short>
+- [ ] 브랜치: `feat/PROJ-123-legacy-shared-example-api`
+- [ ] 베이스: `feat/PROJ-123-remove-example-service` @ <sha short>
 - [ ] Jira: In Progress (또는 유지)
 - [ ] 범위 grep: heartApi N건 → 목표 0
 - [ ] 예상 파일: (list)
@@ -109,8 +109,8 @@ Record count; AC target **0** for migration.
 ## Usage
 
 ```text
-/cb:work-start PROJ-123 legacy-shared-heart-api
-/cb:work-start PROJ-123 remove-heart-service feat/PROJ-123-remove-heart-service
+/cb:work-start PROJ-123 legacy-shared-example-api
+/cb:work-start PROJ-123 remove-example-service feat/PROJ-123-remove-example-service
 ```
 
 ## Next

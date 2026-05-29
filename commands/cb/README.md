@@ -1,7 +1,7 @@
 # cb — 개인 FE 워크플로 (Cursor)
 
 YourOrg frontend: **Jira 정리 → 구현 → PR 리뷰** personal slash commands.  
-**Repo:** https://user.com/changbaebang/my-cursor · 설치: [SETUP.md](../../SETUP.md)
+**Repo:** https://github.com/changbaebang/my-cursor · 설치: [SETUP.md](../../SETUP.md)
 
 **전체 목록·순서**: [`/cb:guide`](cb-guide.md) 또는 채팅에서 `/cb:guide`
 
@@ -121,7 +121,7 @@ Cloud Agent 트리거: [`examples/review-automation-triggers.md`](examples/revie
 (초안 확인 후) 슬랙에 보내줘
 ```
 
-Heart 에픽: [examples/heart-migration.md](examples/heart-migration.md)
+Heart 에픽: [docs/your-epic-example.md](docs/your-epic-example.md)
 
 ---
 

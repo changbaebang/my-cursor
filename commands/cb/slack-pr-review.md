@@ -63,7 +63,7 @@ Slack 리뷰 **요청 스레드** + GitHub PR diff로 코드 리뷰합니다. (`
 ## 예
 
 ```text
-/cb:slack-pr-review https://user.com/archives/C0000000000/p1779264244219899 6953
+/cb:slack-pr-review https://your-org.slack.com/archives/C0000000000/p0000000000000000 1234
 ```
 
 ## 환경

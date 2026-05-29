@@ -31,7 +31,7 @@ argument-hint: '[scan|add|pick|done|promote|open] [url-or-slug] [--area AREA]'
 **발행 SSOT (겹침·중복 체크):**
 
 ```text
-https://changbaebang.github.io/
+https://your-username.github.io/
 ```
 
 `blog-drafts` = **쓸 글**. `learning-backlog` = **배울 것**. 섞지 않는다.
@@ -124,7 +124,7 @@ queued → in-progress → done → blog-ready
 1. `learning-backlog/items/*.md` — `queued` / `in-progress` 목록
 2. 최근 `blog-drafts/*-topic-radar.md` — GO인데 깊이 부족한 주제 → **STUDY** 후보
 3. GeekNews `news.hada.io` — 영상·논문·긴 글 링크 (시그널, SSOT 아님)
-4. changbaebang.github.io — 이미 쓴 주제 제외
+4. your-username.github.io — 이미 쓴 주제 제외
 
 ### learn-radar 출력 템플릿
 
@@ -263,7 +263,7 @@ learn_source: ~/docs/learning-backlog/items/<item-file>.md
 
 ```text
 /cb:learn-radar
-/cb:learn-radar add https://user.com/watch?v=TlpFc7x8SHo --area ai-metrics
+/cb:learn-radar add https://www.youtube.com/watch?v=TlpFc7x8SHo --area ai-metrics
 /cb:learn-radar pick
 /cb:learn-radar done youtube-ai-metrics-xxx
 /cb:learn-radar promote youtube-ai-metrics-xxx

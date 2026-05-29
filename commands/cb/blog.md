@@ -20,7 +20,7 @@ argument-hint: '[draft|curate|publish-check|open|closeout] [slug-or-path] [--fro
 
 `~/.cursor/blog/`는 **이전 경로** — 새 글은 `blog-drafts`에만 쓴다.
 
-점검표: `~/docs/blog-drafts/PUBLISH-CHECKLIST.md`
+점검표: `~/docs/blog-drafts/PUBLISH-C0000000000.md`
 
 ---
 
@@ -34,7 +34,7 @@ argument-hint: '[draft|curate|publish-check|open|closeout] [slug-or-path] [--fro
 | `open` | 최근/지정 파일을 Cursor에서 열기 (`cursor <path>`) |
 | `closeout` | 발행 마무리 — Step 6 (초안·internal 삭제) |
 
-- `slug`: `heart-api-migration-cb-skills` → 파일명 `YYYY-MM-DD-<slug>.md`
+- `slug`: `example-api-migration-skills` → 파일명 `YYYY-MM-DD-<slug>.md`
 - `--from-work-closeout`: 직전 대화의 Jira·PR·배운 점을 초안에 반영
 
 ---
@@ -90,7 +90,7 @@ date: 2026-05-23 21:00:00 +0900
 
 - `_posts` filename prefix = **예상 permalink** `YYYY-MM-DD`: OK | **불일치**
 - front matter `date` timezone `+0900`: OK | 누락
-- 내부 `changbaebang.github.io/YYYY-MM-DD-` 링크: **404 없음** (기존 발행글 URL 기준)
+- 내부 `your-username.github.io/YYYY-MM-DD-` 링크: **404 없음** (기존 발행글 URL 기준)
 
 ---
 
@@ -142,7 +142,7 @@ date: 2026-05-23 21:00:00 +0900
 
 agent가 push했거나, 사용자가 “올렸어”라고 한 **뒤** — 초안 삭제·README 갱신 **전에** permalink가 살아 있는지 확인한다.
 
-1. URL = `https://changbaebang.github.io` + front matter `permalink` (없으면 `/_posts` 파일명 slug로 추정하지 말고 front matter·발행본에서 확인)
+1. URL = `https://your-username.github.io` + front matter `permalink` (없으면 `/_posts` 파일명 slug로 추정하지 말고 front matter·발행본에서 확인)
 2. `curl -s -o /dev/null -w "%{http_code}" -L "<url>"` — **200**일 때까지 대기
 3. 폴링 간격: **30s → 60s → 90s** (합계 ~2분). 200이면 즉시 다음 단계
 4. 200이면 → Step 6 closeout + `blog-drafts/README.md` 최근 발행 표에 URL 한 줄 추가
@@ -240,7 +240,7 @@ tags: [cursor, retrospective, ...]
 
 **`_posts` push 전 필수.** publish-check 없이 발행하지 않는다.
 
-`PUBLISH-CHECKLIST.md` 기준으로 현재 파일 스캔.
+`PUBLISH-C0000000000.md` 기준으로 현재 파일 스캔.
 회사 식별 + SEO + **맞춤법·용어**(예: 착륙/착수) 항목을 함께 확인한다.
 
 출력:
@@ -249,7 +249,7 @@ tags: [cursor, retrospective, ...]
 ## publish-check: <filename>
 
 ### 🔴 수정 필요 (N건)
-- L42: user.com → 삭제
+- L42: internal-slack-host → 삭제
 - ...
 
 ### 🟡 검토 (N건)
@@ -317,7 +317,7 @@ cursor "~/docs/blog-drafts/<latest-or-given>.md"
 
 ```markdown
 ## blog closeout
-- live: https://changbaebang.github.io/... (HTTP 200)
+- live: https://your-username.github.io/... (HTTP 200)
 - deleted: <slug>.md, <slug>.internal.md
 - body SSOT: Jekyll blog repo
 ```
@@ -342,11 +342,11 @@ cursor "~/docs/blog-drafts/<latest-or-given>.md"
 ```text
 /cb:blog
 /cb:blog curate twelve-ways-wrong-ai-coding-curation
-/cb:blog draft heart-api-migration-cb-skills
-/cb:blog publish-check 2026-05-20-heart-api-migration-cb-skills.md
+/cb:blog draft example-api-migration-skills
+/cb:blog publish-check 2026-05-20-example-api-migration-skills.md
 /cb:blog open
-/cb:blog open 2026-05-20-heart-api-migration-cb-skills.md
-/cb:blog closeout heart-api-migration-cb-skills --url https://changbaebang.github.io/...
+/cb:blog open 2026-05-20-example-api-migration-skills.md
+/cb:blog closeout example-api-migration-skills --url https://your-username.github.io/...
 ```
 
 ## Related
@@ -354,5 +354,5 @@ cursor "~/docs/blog-drafts/<latest-or-given>.md"
 - [`blog-radar`](blog-radar.md)
 - [`learn-radar`](learn-radar.md)
 - [`work-closeout`](work-closeout.md)
-- [`examples/heart-migration.md`](examples/heart-migration.md) — 에픽 회고 소스
+- [`docs/your-epic-example.md`](docs/your-epic-example.md) — 에픽 회고 소스
 - [`cb-guide`](cb-guide.md)

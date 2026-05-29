@@ -4,7 +4,7 @@
 set -euo pipefail
 
 PR="${1:?PR number required}"
-OWNER_REPO="${2:-29CM-Developers/frontend-29cm-platform}"
+OWNER_REPO="${2:-your-org/your-frontend-monorepo}"
 OWNER="${OWNER_REPO%%/*}"
 REPO="${OWNER_REPO##*/}"
 

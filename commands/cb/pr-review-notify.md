@@ -17,10 +17,10 @@ argument-hint: '[pr-number|event-payload|--schedule [author-login]]'
 /cb:pr-review-notify 6952
 
 # Schedule batch (open PRs by author)
-/cb:pr-review-notify --schedule changbaebang-example
+/cb:pr-review-notify --schedule your-github-user
 ```
 
-Use `gh api` (never print `GH_TOKEN`). Repo default: `YourOrg-Developers/your-frontend-monorepo`.
+Use `gh api` (never print `GH_TOKEN`). Repo default: `your-org/your-frontend-monorepo`.
 
 ```bash
 OWNER=YourOrg-Developers REPO=your-frontend-monorepo PR=6952
@@ -85,7 +85,7 @@ Post replies only when user says **"PR에 답글 달아줘"** / automation polic
 
 ### A.2 schedule 입력 payload(자동화 제공 또는 설정값)
 - repository.full_name
-- target_pr_author_login (예: `changbaebang-example`)  
+- target_pr_author_login (예: `your-github-user`)  
   - 없으면 실행 주체(automation owner) 기준으로 조회
 - include_states: 기본 `open`
 - base/head 브랜치 필터: 기본 `사용 안 함`

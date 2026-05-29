@@ -2,7 +2,7 @@
 # Merge origin/<feat-branch> into qa and push. See ~/.cursor/commands/cb/qa-branch-reflect.md
 set -euo pipefail
 
-FEAT_BRANCH="${1:?Usage: qa-branch-reflect.sh <feat-branch> e.g. feat/M29CMCCF-1043-remove-heart-service}"
+FEAT_BRANCH="${1:?Usage: qa-branch-reflect.sh <feat-branch> e.g. feat/PROJ-123-remove-example-service}"
 
 if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
   echo "error: not a git repository" >&2

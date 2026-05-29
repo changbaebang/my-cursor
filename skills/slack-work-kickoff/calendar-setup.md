@@ -13,7 +13,7 @@
 
 ## 권장: Google Workspace CLI (`gws`)
 
-공식에 가까운 오픈소스 CLI: [googleworkspace/cli](https://user.com/googleworkspace/cli)  
+공식에 가까운 오픈소스 CLI: [googleworkspace/cli](https://github.com/googleworkspace/cli)  
 문서: [Quickstart](https://googleworkspace-cli.mintlify.app/quickstart) · [Calendar commands](https://googleworkspace-cli.mintlify.app/commands/calendar)
 
 Drive, Gmail, **Calendar**, Sheets 등 Workspace API를 터미널에서 호출한다.  
@@ -40,7 +40,7 @@ gws auth login
 **회사(무신사) 계정:** Workspace 관리자가 OAuth 앱 승인을 막아 둔 경우가 많다.  
 그때는 개인 `gws auth setup` 대신 **사내 승인된 Desktop OAuth 클라이언트** JSON을 받아 `client_secret.json`에 넣고 `gws auth login`.
 
-필요 scope 예: `https://user.com/auth/calendar.readonly` (읽기만이면 readonly)
+필요 scope 예: `https://www.googleapis.com/auth/calendar.readonly` (읽기만이면 readonly)
 
 ### 3) slack-work-kickoff에서 쓸 명령
 
@@ -71,7 +71,7 @@ gws calendar freebusy query --json '{
   "timeMin": "2026-05-21T12:00:00+09:00",
   "timeMax": "2026-05-21T18:00:00+09:00",
   "timeZone": "Asia/Seoul",
-  "items": [{"id": "user.com"}]
+  "items": [{"id": "user@example.com"}]
 }'
 ```
 

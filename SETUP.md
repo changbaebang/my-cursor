@@ -5,14 +5,14 @@ Clone 후 **5~15분** 안에 Cursor 개인 워크플로를 쓸 수 있게 하는
 ## 1. Clone
 
 ```bash
-git clone git@user.com:changbaebang/my-cursor.git ~/Codes/my-cursor
+git clone git@github.com:changbaebang/my-cursor.git ~/Codes/my-cursor
 cd ~/Codes/my-cursor
 ```
 
 HTTPS:
 
 ```bash
-git clone https://user.com/changbaebang/my-cursor.git ~/Codes/my-cursor
+git clone https://github.com/changbaebang/my-cursor.git ~/Codes/my-cursor
 ```
 
 ## 2. Install into `~/.cursor`
@@ -36,7 +36,7 @@ chmod +x install.sh scripts/sync-to-repo.sh
 
 | 도구 | 필수 | 용도 |
 |------|------|------|
-| [Cursor](https://user.com) | ✅ | IDE |
+| [Cursor](https://cursor.com) | ✅ | IDE |
 | **Node 18+** (`fnm` 권장 22) | ✅ | `gws`, 일부 스크립트 |
 | **`gh`** | ✅ | PR·리뷰 스킬 |
 | **Slack MCP** | ✅ | Cursor Slack 플러그인 |
@@ -67,8 +67,8 @@ cp mcp.json.example ~/.cursor/mcp.json
 
 | Server | 설정 |
 |--------|------|
-| atlassian | SSE `https://user.com/v1/mcp` (Cursor에서 연결) |
-| Figma | `https://user.com/mcp` |
+| atlassian | SSE `https://mcp.atlassian.com/v1/mcp` (Cursor에서 연결) |
+| Figma | `https://mcp.figma.com/mcp` |
 | github | Copilot MCP + `github_pat_...` |
 | Slack | Cursor **Plugins → Slack** (별도 mcp.json 항목 아님) |
 

@@ -12,7 +12,7 @@ function parseArgs(argv) {
   const args = {
     url: null,
     pr: null,
-    repo: '29CM-Developers/frontend-29cm-platform',
+    repo: 'your-org/your-frontend-monorepo',
     statOnly: false,
     reactStart: false,
     reactDone: false,

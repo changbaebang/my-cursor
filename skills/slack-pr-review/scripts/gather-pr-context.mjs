@@ -7,7 +7,7 @@ import { execSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
 import { pathToFileURL } from 'node:url';
 
-const DEFAULT_REPO = '29CM-Developers/frontend-29cm-platform';
+const DEFAULT_REPO = 'your-org/your-frontend-monorepo';
 
 function parseArgs(argv) {
   const args = { pr: null, repo: DEFAULT_REPO, statOnly: false };

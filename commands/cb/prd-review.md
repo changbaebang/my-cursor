@@ -16,7 +16,7 @@ argument-hint: '[pr-number|pr-url|--paste] [confluence-url]'
 
 | 항목 | 값 |
 |------|-----|
-| Trigger | Comment **matches** `PRD` (또는 `\[방창배\] PRD`) |
+| Trigger | Comment **matches** `PRD` (또는 `\[your-label\] PRD`) |
 | Author | Me |
 | PR author | Me |
 | Repository | `your-frontend-monorepo` |
@@ -198,7 +198,7 @@ gh pr comment <N> --body-file /tmp/prd-review.md
 
 ```text
 /cb:prd-review 6952
-/cb:prd-review https://user.com/YourOrg-Developers/your-frontend-monorepo/pull/6952
+/cb:prd-review https://github.com/your-org/your-frontend-monorepo/pull/1234
 /cb:prd-review --paste
 /cb:prd-review 6952 https://example-org.atlassian.net/wiki/...
 ```

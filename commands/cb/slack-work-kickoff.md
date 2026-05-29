@@ -15,7 +15,7 @@ argument-hint: '<slack-permalink> [--channel <name>] [--calendar] [--post]'
 ## 인자
 
 1. **`<slack-permalink>`** (필수)
-2. **`--channel <name>`** (선택) — 게시 채널. 기본 `#29-team-frontend-스몰톡`
+2. **`--channel <name>`** (선택) — 게시 채널. 기본 `#your-team-frontend-스몰톡`
 3. **`--post`** (선택) — 확인 없이 즉시 게시. 평소에는 초안만.
 
 ## 워크플로우 (요약)
@@ -39,6 +39,6 @@ argument-hint: '<slack-permalink> [--channel <name>] [--calendar] [--post]'
 ## 예
 
 ```text
-/cb:slack-work-kickoff https://user.com/archives/C0000000000/p1779163206882539
+/cb:slack-work-kickoff https://your-org.slack.com/archives/C0000000000/p0000000000000000
 /cb:slack-work-kickoff <permalink> --post
 ```

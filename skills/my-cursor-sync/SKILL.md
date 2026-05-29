@@ -10,7 +10,7 @@ disable-model-invocation: true
 
 # my-cursor sync (personal)
 
-**Repo:** https://user.com/changbaebang/my-cursor  
+**Repo:** https://github.com/changbaebang/my-cursor  
 **로컬 기본 경로:** `~/Codes/my-cursor` (또는 `MY_CURSOR_REPO` env)
 
 `~/.cursor` **전체**가 아니라 **공유 가능한 자산만** repo로 보낸다.
@@ -53,7 +53,7 @@ git grep -E 'xoxp-|xoxb-|github_pat_[A-Za-z0-9]{10,}|ghp_[A-Za-z0-9]{20,}|GOCSPX
 **my-cursor·Cursor 설정 관련 커밋에는 항상 Cursor co-author trailer를 넣는다.**
 
 ```text
-Co-authored-by: Cursor <cursoragent@user.com>
+Co-authored-by: Cursor <cursoragent@cursor.com>
 ```
 
 **에이전트·사용자 모두** 아래 스크립트로 커밋 (직접 `git commit -m`만 쓰지 않음):
@@ -71,13 +71,13 @@ sync: cursor skills/commands/scripts
 
 - added/updated: slack-work-kickoff
 
-Co-authored-by: Cursor <cursoragent@user.com>
+Co-authored-by: Cursor <cursoragent@cursor.com>
 ```
 
 수동 커밋 시에도 본문 **마지막 줄**에 위 trailer 필수. `git commit --trailer` 사용 가능:
 
 ```bash
-git commit -m "sync: …" --trailer "Co-authored-by: Cursor <cursoragent@user.com>"
+git commit -m "sync: …" --trailer "Co-authored-by: Cursor <cursoragent@cursor.com>"
 ```
 
 ### 4. push
@@ -91,7 +91,7 @@ git push origin main
 ### 5. 다른 Mac / 동료
 
 ```bash
-git clone git@user.com:changbaebang/my-cursor.git ~/Codes/my-cursor
+git clone git@github.com:changbaebang/my-cursor.git ~/Codes/my-cursor
 cd ~/Codes/my-cursor && ./install.sh
 ```
 
@@ -115,7 +115,7 @@ cd ~/Codes/my-cursor && ./install.sh
 
 | 규칙 | 내용 |
 |------|------|
-| Co-author | `Co-authored-by: Cursor <cursoragent@user.com>` |
+| Co-author | `Co-authored-by: Cursor <cursoragent@cursor.com>` |
 | 도구 | `./scripts/commit-with-cursor.sh` 우선 |
 | 범위 | `my-cursor` repo 및 Cursor skills/commands/docs 커밋 |
 

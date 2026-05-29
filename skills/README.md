@@ -1,6 +1,6 @@
 # Personal Cursor skills (changbae)
 
-**Repo:** [changbaebang/my-cursor](https://user.com/changbaebang/my-cursor) · 설치: [SETUP.md](../SETUP.md)
+**Repo:** [changbaebang/my-cursor](https://github.com/changbaebang/my-cursor) · 설치: [SETUP.md](../SETUP.md)
 
 **Hub**: `/cb:guide` → [`cb-guide`](../commands/cb/cb-guide.md) · [`commands/cb/README.md`](../commands/cb/README.md)
 

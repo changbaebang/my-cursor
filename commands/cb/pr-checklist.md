@@ -42,8 +42,8 @@ Tier policy (YourOrg - MUST):
 
 Jira policy (MUST):
 - Extract Jira key from PR title with regex: ([A-Z0-9]+-\d+)
-- Build Jira URL: https://user.com/browse/<JIRA_KEY>
-- Example: PROJ-123 -> https://user.com/browse/PROJ-123
+- Build Jira URL: https://jira.example.com/browse/<JIRA_KEY>
+- Example: PROJ-123 -> https://jira.example.com/browse/PROJ-123
 - Never truncate full key (e.g., do not reduce PROJ-123 to CMCCF-1447)
 
 Hard Gates:

@@ -5,7 +5,7 @@
 **입력**
 
 ```text
-/cb:slack-work-kickoff https://user.com/archives/C0000000000/p1779163206882539
+/cb:slack-work-kickoff https://your-org.slack.com/archives/C0000000000/p0000000000000000
 ```
 
 **앵커 스레드 요약**
@@ -21,7 +21,7 @@
 | 담당 | 변치훈 (일정 다운로드 약속) |
 | 기한 | 목요일 (오늘 기준 follow-up) |
 
-**게시 채널:** `#29-team-frontend-스몰톡`
+**게시 채널:** `#your-team-frontend-스몰톡`
 
 **메시지 초안 (발췌)**
 
@@ -51,7 +51,7 @@
 **입력**
 
 ```text
-/cb:slack-work-kickoff https://user.com/archives/C0000000000/p1779335419029609?thread_ts=1779331841.368609
+/cb:slack-work-kickoff https://your-org.slack.com/archives/C0000000000/p0000000000000000?thread_ts=0000000000.000000
 ```
 
 **스레드 답변**
