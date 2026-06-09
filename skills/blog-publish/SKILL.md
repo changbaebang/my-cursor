@@ -13,7 +13,7 @@ Use this skill when the user explicitly asks to publish a post after `publish-ch
 ## What this skill does
 
 - Takes one draft from `~/docs/blog-drafts`
-- Copies it to `~/Codes/your-username.github.io/_posts` using permalink date rules
+- Copies it to `~/Codes/changbaebang.github.io/_posts` using permalink date rules
 - Commits and pushes to the blog repo
 - Verifies live URL returns 200
 - Deletes draft only after live verification succeeds

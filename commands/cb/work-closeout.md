@@ -40,7 +40,7 @@ From ticket / triage type:
 **A — API migration**
 
 ```bash
-rg 'heartApi|from '\''-org/apis'\''.*heart' <scope> || true
+rg 'heartApi|from '\''@acme/apis'\''.*heart' <scope> || true
 # expect 0 in scope
 ```
 
@@ -53,7 +53,7 @@ rg 'heartApi|from '\''-org/apis'\''.*heart' <scope> || true
 
 **General**
 
-- [ ] 커밋 메시지에 `(PROJ-xxxx)`
+- [ ] 커밋 메시지에 `(M29CMCCF-xxxx)`
 - [ ] 베이스 브랜치가 epic이면 PR base 확인
 
 ## Step 3 — Push & PR
@@ -76,19 +76,19 @@ gh pr view <N> --json state,reviewDecision,baseRefName,url
 
 ## Step 5 — Jira (MCP, after user confirms or explicit request)
 
-Cloud: `example-org`
+Cloud: `your-org-oneteam`
 
 - Merged & AC met → `transitionJiraIssue` Done (`61`)
-- Next subtask → Start (`21`) on e.g. `PROJ-123`
+- Next subtask → Start (`21`) on e.g. `PROJ-200`
 - Parent epic: all children Done → consider epic comment (no auto-close unless asked)
 
 Browse URL: `https://jira.example.com/browse/<KEY>`  
-(또는 `https://example-org.atlassian.net/browse/<KEY>`)
+(또는 `https://your-org.atlassian.net/browse/<KEY>`)
 
 ## Step 6 — Output (Korean)
 
 ```markdown
-## work-closeout: PROJ-123
+## work-closeout: PROJ-200
 
 ### 상태
 - Git: …
@@ -99,7 +99,7 @@ Browse URL: `https://jira.example.com/browse/<KEY>`
 - [ ] 푸시됨
 - [ ] PR 승인/머지 (또는 대기 중 명시)
 - [ ] Jira Done
-- [ ] 다음 티켓: PROJ-123 (제안)
+- [ ] 다음 티켓: PROJ-200 (제안)
 
 ### 권장 다음 액션
 1. …
@@ -108,14 +108,14 @@ Browse URL: `https://jira.example.com/browse/<KEY>`
 ## Commit policy
 
 - User said "커밋하고 푸시" → commit with HEREDOC message:
-  `feat(scope): … (PROJ-xxxx)`
+  `feat(scope): … (M29CMCCF-xxxx)`
 - Otherwise **do not commit**
 
 ## Usage
 
 ```text
-/cb:work-closeout PROJ-123
-/cb:work-closeout PROJ-123 6952
+/cb:work-closeout PROJ-200
+/cb:work-closeout PROJ-200 6952
 ```
 
 ## Pipeline

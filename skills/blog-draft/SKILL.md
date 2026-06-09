@@ -1,7 +1,7 @@
 ---
 name: blog-draft
 description: >-
-  Write or polish blog posts in ~/docs/blog-drafts. Use for /cb:blog,
+  Write or polish blog posts in /Users/your-org/docs/blog-drafts. Use for /cb:blog,
   블로그 초안, blog-drafts, velog 회고, curate (외부 글 큐레이션). publish-check includes
   SEO 1-minute check. After publish: delete drafts. NEVER push _posts without
   publish-check and explicit user publish approval.
@@ -14,7 +14,7 @@ Slash: **`/cb:blog`**
 
 | 경로 | 역할 |
 |------|------|
-| `~/docs/blog-drafts/*.md` | **미발행** 초안만 (발행 후 삭제) |
+| `/Users/your-org/docs/blog-drafts/*.md` | **미발행** 초안만 (발행 후 삭제) |
 | Jekyll 블로그 repo `_posts/` | 발행 본문 SSOT (복사·commit은 파이프라인 마지막) |
 
 Rules: `~/.cursor/commands/cb/blog.md` — **KST** front matter · **`_posts` filename = permalink URL date** (site timezone Vancouver — KST 새벽 URL 하루 전 가능).

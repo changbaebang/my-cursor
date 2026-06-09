@@ -3,7 +3,7 @@ name: work-triage
 description: >-
   Classifies FE work (api-migration, regression, mechanical-move, epic, etc.) and proposes
   Jira AC, base branch, commit/PR slices. Use when the user runs /cb:work-triage,
-  asks 작업 나누기, 유형 분류, epic 쪼개기, or how to split PROJ tickets.
+  asks 작업 나누기, 유형 분류, epic 쪼개기, or how to split M29CMCCF tickets.
 disable-model-invocation: true
 ---
 

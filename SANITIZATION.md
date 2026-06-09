@@ -2,7 +2,8 @@
 
 This repository is a **public mirror** of a private Cursor workflow repo.
 
-- Company-specific skills (deploy approval, standup, local monorepo dev, vendor toolkit, incident runbooks, E2E hostnames) are **omitted**.
+- Company-specific skills (deploy approval, standup, local monorepo dev, vendor toolkit, incident runbooks) are **omitted** or **sanitized**.
+- **E2E suite** (`e2e-design`, `e2e-local-page`, `e2e-deployed-check` + matching `skills/*`) is published with hostnames replaced (`qa.example.com`, `PROJ-123`, …).
 - Slack channel IDs, Jira hosts, and internal URLs are **placeholders** (`your-org`, `example.com`, `PROJ-123`, `C0000000000`).
 - Before use, search for `your-`, `example.com`, `YourOrg`, and replace with your values.
 

@@ -14,8 +14,8 @@ argument-hint: '<YYYY-MM-DD-slug.md> [--repo /abs/path/to/blog-repo] [--branch m
 
 ## 기본 경로
 
-- drafts: `~/docs/blog-drafts`
-- blog repo: `~/Codes/your-username.github.io`
+- drafts: `/Users/your-org/docs/blog-drafts`
+- blog repo: `/Users/your-org/Codes/changbaebang.github.io`
 - posts: `<blog repo>/_posts`
 
 ## 실행 순서 (MUST)
@@ -39,8 +39,8 @@ argument-hint: '<YYYY-MM-DD-slug.md> [--repo /abs/path/to/blog-repo] [--branch m
 ```markdown
 ## blog publish
 - source: /Users/.../docs/blog-drafts/...
-- target: /Users/.../your-username.github.io/_posts/...
+- target: /Users/.../changbaebang.github.io/_posts/...
 - commit: <sha>
-- live: https://your-username.github.io/... (200)
+- live: https://changbaebang.github.io/... (200)
 - closeout: draft deleted
 ```

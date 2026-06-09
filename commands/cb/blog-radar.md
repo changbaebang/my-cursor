@@ -15,13 +15,13 @@ argument-hint: '[scan|pick|open] [--days N]'
 **주제 후보 디렉터리:**
 
 ```text
-~/docs/blog-drafts
+/Users/your-org/docs/blog-drafts
 ```
 
 **발행 글 SSOT (겹침 체크):**
 
 ```text
-https://your-username.github.io/
+https://changbaebang.github.io/
 ```
 
 발행 초안(`YYYY-MM-DD-<slug>.md`)과 분리한다.  
@@ -45,9 +45,9 @@ https://your-username.github.io/
 
 | 카테고리 | 우선 소스 |
 |----------|-----------|
-| Google Web/Chrome | `blog.google`, `developers.google.com` |
+| Google Web/Chrome | `developer.chrome.com/blog`, `developers.googleblog.com` |
 | Google Cloud | `cloud.google.com/blog` |
-| Azure | `azure.microsoft.com`, Microsoft Build/Azure announcements |
+| Azure | `devblogs.microsoft.com/azure`, Microsoft Build/Azure announcements |
 | React | `react.dev/blog`, `github.com/facebook/react/releases` |
 | GeekNews | `news.hada.io` (시그널용, SSOT 아님) |
 
@@ -82,7 +82,7 @@ GeekNews는 **링크 허브**로만 사용한다.
 ## Output file (MUST)
 
 ```text
-~/docs/blog-drafts/YYYY-MM-DD-topic-radar.md
+/Users/your-org/docs/blog-drafts/YYYY-MM-DD-topic-radar.md
 ```
 
 날짜 = **오늘(KST)** unless user specifies.
@@ -121,7 +121,7 @@ tags: [blog, radar, topics]
 - ...
 
 ## 기존 글과 연결
-- [관련 발행 글](https://your-username.github.io/...)
+- [관련 발행 글](https://changbaebang.github.io/...)
 ```
 
 ---
@@ -131,7 +131,7 @@ tags: [blog, radar, topics]
 ### Step 1 — scan
 
 1. 소스별 최근 `--days` 항목 수집
-2. your-username.github.io 최근 글 제목 확인 (겹침 방지)
+2. changbaebang.github.io 최근 글 제목 확인 (겹침 방지)
 3. 후보 5~7개 선별 (`GO/MAYBE/PASS`)
 4. `YYYY-MM-DD-topic-radar.md` 작성 또는 갱신
 
@@ -144,7 +144,7 @@ tags: [blog, radar, topics]
 ### Step 3 — open
 
 ```bash
-cursor "~/docs/blog-drafts/<latest-topic-radar>.md"
+cursor "/Users/your-org/docs/blog-drafts/<latest-topic-radar>.md"
 ```
 
 ---
@@ -170,7 +170,7 @@ cursor "~/docs/blog-drafts/<latest-topic-radar>.md"
 ```markdown
 ## Result
 - mode: scan | pick | open
-- path: ~/docs/blog-drafts/YYYY-MM-DD-topic-radar.md
+- path: /Users/your-org/docs/blog-drafts/YYYY-MM-DD-topic-radar.md
 - candidates: GO n / MAYBE n / PASS n
 - recommended: <title>
 

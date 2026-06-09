@@ -17,7 +17,7 @@ argument-hint: '<jira-key|pr-number|pr-url>'
 
 ## Arguments
 
-- `PROJ-123` — Jira 중심
+- `PROJ-200` — Jira 중심
 - `6952` or PR URL — PR 중심 (제목에서 Jira 키 추출)
 
 ## Step 1 — Gather
@@ -28,21 +28,21 @@ gh pr view <N> --json title,body,baseRefName,headRefName,files,commits
 gh pr diff <N> --stat
 
 # Jira면 (MCP)
-getJiraIssue PROJ-xxxx
+getJiraIssue M29CMCCF-xxxx
 ```
 
 ## Step 2 — Classify (pick one primary, optional secondary)
 
 | Type | 코드 | 신호 | 베이스 브랜치 | 커밋 | QA |
 |------|------|------|---------------|------|-----|
-| API 마이그레이션 | **A** | legacy API → `-org/apis-*`, import 제거 | epic/feature 브랜치 | 앱·패키지 단위 | grep 0건 + 스팟 |
+| API 마이그레이션 | **A** | legacy API → `@acme/apis-*`, import 제거 | epic/feature 브랜치 | 앱·패키지 단위 | grep 0건 + 스팟 |
 | 회귀/버그 | **B** | hotfix, 재현, 이전 PR 연관 | `main` or release | 최소 diff | 재현→수정→회귀 |
 | 기계적 이동 | **C** | rename/move only | topic 브랜치 | 경로 단위 | blame·소비처 동일 |
 | 문구/스타일 | **D** | copy, CSS token | topic | 작게 | 시각 스팟 |
 | 작은 동작 변경 | **E** | 단일 플로우, <~20 files | topic | 기능 단위 | 시나리오 3~5 |
 | 대규모 에픽 | **F** | 다수 PR, 플래그, 단계 머지 | epic 브랜치 | 하위 PR = 하위 Jira | 단계별 QA |
 
-**Epic + A**: `F` primary, `A` secondary (heart `PROJ-123`).
+**Epic + A**: `F` primary, `A` secondary (heart `PROJ-200`).
 
 ## Step 3 — Output (strict, Korean)
 
@@ -54,8 +54,8 @@ getJiraIssue PROJ-xxxx
 
 ### 실행 전략
 
-- **베이스 브랜치**: e.g. `feat/PROJ-123-remove-example-service`
-- **작업 브랜치**: `feat/PROJ-123-legacy-shared-example-api`
+- **베이스 브랜치**: e.g. `feat/PROJ-200-remove-heart-service`
+- **작업 브랜치**: `feat/PROJ-200-legacy-shared-heart-api`
 - **예상 PR 수**: N
 - **커밋 단위 제안**: bullet (1 PR = 1~3 logical commits)
 
@@ -105,7 +105,7 @@ getJiraIssue PROJ-xxxx
 ## Usage
 
 ```text
-/cb:work-triage PROJ-123
+/cb:work-triage PROJ-200
 /cb:work-triage 6952
-/cb:work-triage https://github.com/your-org/your-frontend-monorepo/pull/1234
+/cb:work-triage https://github.com/your-org/frontend-monorepo/pull/6952
 ```

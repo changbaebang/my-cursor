@@ -16,7 +16,7 @@ Full rules: read `~/.cursor/commands/cb/learn-radar.md` and follow exactly.
 ## Quick rules
 
 - Goal: **what to learn**, not what to publish yet.
-- SSOT: `~/docs/learning-backlog/`
+- SSOT: `/Users/your-org/docs/learning-backlog/`
 - Radar file: `YYYY-MM-DD-learn-radar.md`
 - Items: `items/YYYY-MM-DD-<slug>.md` with `status: queued | in-progress | done | blog-ready`
 - After learning: **`promote`** → `/cb:blog draft` input in `blog-drafts`

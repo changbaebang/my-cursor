@@ -50,14 +50,14 @@ Read **`~/.cursor/commands/cb/README.md`** for directory layout and workflow exa
 
 | 슬래시 | 초점 | 승인 성격 | Legacy 라벨 |
 |--------|------|-----------|---------------|
-| [`/cb:prd-review`](prd-review.md) | PRD 1~8, alignment | 문서·스코프 | `[your-label] PRD` |
-| [`/cb:pr-checklist`](pr-checklist.md) | 템플릿·테스트·Tier | APPROVE/RC/COMMENT | `[your-label][기본] PR template` |
-| [`/cb:typescript-review`](typescript-review.md) | any, assert, ts-ignore | 수정 요청/권고 | `[your-label][기본] Typescript` |
-| [`/cb:nextjs-review`](nextjs-review.md) | RSC, use client, Gateway | RC vs COMMENT | `[your-label][기본] Nextjs` |
-| [`/cb:react-review`](react-review.md) | 보안·아키·버그 | 수정 요청 | `[your-label][기본] React` |
-| [`/cb:hygiene-review`](hygiene-review.md) | deps, lockfile, dead code | APPROVE_* | `[your-label][커서리뷰] Hygiene` |
-| [`/cb:critical-review`](critical-review.md) | 크래시·보안·데이터 | Approve/Not | `[your-label][커서리뷰] 심각도` |
-| [`/cb:pr-review-notify`](pr-review-notify.md) | 사람 리뷰 승인 DM·수정요청 답글 | 구조화 출력 | `[your-label] PR 승인(사람만)` |
+| [`/cb:prd-review`](prd-review.md) | PRD 1~8, alignment | 문서·스코프 | `[방창배] PRD` |
+| [`/cb:pr-checklist`](pr-checklist.md) | 템플릿·테스트·Tier | APPROVE/RC/COMMENT | `[방창배][기본] PR template` |
+| [`/cb:typescript-review`](typescript-review.md) | any, assert, ts-ignore | 수정 요청/권고 | `[방창배][기본] Typescript` |
+| [`/cb:nextjs-review`](nextjs-review.md) | RSC, use client, Gateway | RC vs COMMENT | `[방창배][기본] Nextjs` |
+| [`/cb:react-review`](react-review.md) | 보안·아키·버그 | 수정 요청 | `[방창배][기본] React` |
+| [`/cb:hygiene-review`](hygiene-review.md) | deps, lockfile, dead code | APPROVE_* | `[방창배][커서리뷰] Hygiene` |
+| [`/cb:critical-review`](critical-review.md) | 크래시·보안·데이터 | Approve/Not | `[방창배][커서리뷰] 심각도` |
+| [`/cb:pr-review-notify`](pr-review-notify.md) | 사람 리뷰 승인 DM·수정요청 답글 | 구조화 출력 | `[방창배] PR 승인(사람만)` |
 
 **중복 피하기**
 

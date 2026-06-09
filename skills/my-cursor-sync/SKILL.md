@@ -38,6 +38,14 @@ cd "${MY_CURSOR_REPO:-$HOME/Codes/my-cursor}"
 
 또는 에이전트가 동일 rsync 규칙으로 파일 복사.
 
+`~/.cursor/docs`가 repo symlink가 **아닐 때** (기존 설치): automation 등 변경분을 repo로 복사한 뒤 커밋.
+
+```bash
+rsync -av "$HOME/.cursor/docs/" "${MY_CURSOR_REPO:-$HOME/Codes/my-cursor}/docs/"
+```
+
+`skills/*`는 `install.sh` symlink면 repo가 이미 SSOT — `sync-to-repo.sh`의 skills rsync는 README 등 비연결 파일만 맞춤.
+
 ### 2. 시크릿 스캔 (커밋 전 필수)
 
 ```bash

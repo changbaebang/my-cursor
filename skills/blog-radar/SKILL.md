@@ -16,7 +16,7 @@ Full rules: read `~/.cursor/commands/cb/blog-radar.md` and follow exactly.
 ## Quick rules
 
 - Goal: **pick blog topics**, not summarize news feeds.
-- Output file: `~/docs/blog-drafts/YYYY-MM-DD-topic-radar.md`
+- Output file: `/Users/your-org/docs/blog-drafts/YYYY-MM-DD-topic-radar.md`
 - Max candidates: **5~7** with `GO / MAYBE / PASS`
 - Recommend **1 topic to write today**
 - Next: `/cb:blog draft <slug>`

@@ -15,7 +15,7 @@ argument-hint: '[scan|add|pick|done|promote|open] [url-or-slug] [--area AREA]'
 **학습 백로그 디렉터리:**
 
 ```text
-~/docs/learning-backlog/
+/Users/your-org/docs/learning-backlog/
 ├── README.md
 ├── YYYY-MM-DD-learn-radar.md    # 스캔 결과 (blog topic-radar와 동일 역할)
 └── items/
@@ -25,13 +25,13 @@ argument-hint: '[scan|add|pick|done|promote|open] [url-or-slug] [--area AREA]'
 **블로그 초안 (promote 출력):**
 
 ```text
-~/docs/blog-drafts/YYYY-MM-DD-<blog-slug>.md
+/Users/your-org/docs/blog-drafts/YYYY-MM-DD-<blog-slug>.md
 ```
 
 **발행 SSOT (겹침·중복 체크):**
 
 ```text
-https://your-username.github.io/
+https://changbaebang.github.io/
 ```
 
 `blog-drafts` = **쓸 글**. `learning-backlog` = **배울 것**. 섞지 않는다.
@@ -71,7 +71,7 @@ https://your-username.github.io/
 ## Item file template (MUST)
 
 ```text
-~/docs/learning-backlog/items/YYYY-MM-DD-<slug>.md
+/Users/your-org/docs/learning-backlog/items/YYYY-MM-DD-<slug>.md
 ```
 
 ```markdown
@@ -124,7 +124,7 @@ queued → in-progress → done → blog-ready
 1. `learning-backlog/items/*.md` — `queued` / `in-progress` 목록
 2. 최근 `blog-drafts/*-topic-radar.md` — GO인데 깊이 부족한 주제 → **STUDY** 후보
 3. GeekNews `news.hada.io` — 영상·논문·긴 글 링크 (시그널, SSOT 아님)
-4. your-username.github.io — 이미 쓴 주제 제외
+4. changbaebang.github.io — 이미 쓴 주제 제외
 
 ### learn-radar 출력 템플릿
 
@@ -187,7 +187,7 @@ layout: post
 title: "<Blog angle 제목 후보>"
 date: YYYY-MM-DD HH:MM:SS +0900
 tags: [...]
-learn_source: ~/docs/learning-backlog/items/<item-file>.md
+learn_source: /Users/your-org/docs/learning-backlog/items/<item-file>.md
 ---
 
 > 학습 백로그에서 promote. 원 학습: [title](source-url)

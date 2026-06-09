@@ -3,7 +3,7 @@ command: '/cb:work-start'
 category: 'Git & Version Control'
 purpose: 'Jira 티켓 기준 작업 브랜치 생성·범위 검증·시작 체크리스트'
 description: >-
-  feat/PROJ-{id}-{slug} 브랜치를 만들고 베이스·grep AC를 확인한다.
+  feat/M29CMCCF-{id}-{slug} 브랜치를 만들고 베이스·grep AC를 확인한다.
   코드 구현은 사용자 지시 후 진행한다.
 argument-hint: '<jira-key> <branch-slug> [base-branch]'
 ---
@@ -12,25 +12,25 @@ argument-hint: '<jira-key> <branch-slug> [base-branch]'
 
 ## Arguments
 
-1. **Jira key** (required): `PROJ-123`
-2. **branch slug** (required): `legacy-shared-example-api` (소문자·하이픈)
+1. **Jira key** (required): `PROJ-200`
+2. **branch slug** (required): `legacy-shared-heart-api` (소문자·하이픈)
 3. **base branch** (optional): default from `/cb:work-triage` or epic branch
 
 Derived branch name:
 
 ```text
-feat/PROJ-123-legacy-shared-example-api
+feat/PROJ-200-legacy-shared-heart-api
 ```
 
 Helper:
 
 ```bash
-~/.cursor/scripts/cb/branch-name.sh PROJ-123 legacy-shared-example-api
+~/.cursor/scripts/cb/branch-name.sh PROJ-200 legacy-shared-heart-api
 ```
 
 ## Preconditions
 
-1. Run in **repo root** (`your-frontend-monorepo`).
+1. Run in **repo root** (`frontend-monorepo`).
 2. Working tree clean or user acknowledged stash.
 3. `git fetch origin` for base branch.
 
@@ -40,7 +40,7 @@ Helper:
 
 | 상황 | 베이스 |
 |------|--------|
-| Epic 하위 (example, 순환참조) | `feat/PROJ-123-remove-example-service` 등 epic 브랜치 |
+| Epic 하위 (heart, 순환참조) | `feat/PROJ-200-remove-heart-service` 등 epic 브랜치 |
 | Hotfix / 단독 | `main` or user-specified |
 | Unclear | Ask once; do not guess `main` if triage said epic |
 
@@ -52,7 +52,7 @@ git pull origin <base>
 ### 2) Create branch
 
 ```bash
-git checkout -b feat/PROJ-123-legacy-shared-example-api
+git checkout -b feat/PROJ-200-legacy-shared-heart-api
 ```
 
 Only run if user asked to create branch OR `/cb:work-start` explicitly includes "브랜치 만들어".
@@ -75,10 +75,10 @@ Record count; AC target **0** for migration.
 ### 5) Output checklist (Korean)
 
 ```markdown
-## work-start: PROJ-123
+## work-start: PROJ-200
 
-- [ ] 브랜치: `feat/PROJ-123-legacy-shared-example-api`
-- [ ] 베이스: `feat/PROJ-123-remove-example-service` @ <sha short>
+- [ ] 브랜치: `feat/PROJ-200-legacy-shared-heart-api`
+- [ ] 베이스: `feat/PROJ-200-remove-heart-service` @ <sha short>
 - [ ] Jira: In Progress (또는 유지)
 - [ ] 범위 grep: heartApi N건 → 목표 0
 - [ ] 예상 파일: (list)
@@ -89,7 +89,7 @@ Record count; AC target **0** for migration.
 
 **A — API migration**
 
-- `-org/apis-heart` + `getResultData`; mutation은 `!success` throw
+- `@acme/apis-heart` + `getResultData`; mutation은 `!success` throw
 - `packages/*/package.json` devDependency 필요 시 추가
 
 **B — Regression**
@@ -109,8 +109,8 @@ Record count; AC target **0** for migration.
 ## Usage
 
 ```text
-/cb:work-start PROJ-123 legacy-shared-example-api
-/cb:work-start PROJ-123 remove-example-service feat/PROJ-123-remove-example-service
+/cb:work-start PROJ-200 legacy-shared-heart-api
+/cb:work-start PROJ-200 remove-heart-service feat/PROJ-200-remove-heart-service
 ```
 
 ## Next
