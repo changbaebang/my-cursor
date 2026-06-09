@@ -88,13 +88,26 @@ Co-authored-by: Cursor <cursoragent@cursor.com>
 git commit -m "sync: …" --trailer "Co-authored-by: Cursor <cursoragent@cursor.com>"
 ```
 
-### 4. push
+### 4. push (private)
 
 사용자가 요청했을 때만:
 
 ```bash
 git push origin main
 ```
+
+### 4b. public mirror (선택)
+
+외부 공개 repo `changbaebang/my-cursor` — allowlist + sanitize:
+
+```bash
+./scripts/publish-to-public.sh
+cd "${MY_CURSOR_PUBLIC:-$HOME/Codes/my-cursor-public}"
+git add …  # allowlist만 또는 publish 스크립트 안내 따름
+git push origin main
+```
+
+`scripts/publish-allowlist.txt` · [SANITIZATION.md](../../SANITIZATION.md) (public worktree).
 
 ### 5. 다른 Mac / 동료
 
