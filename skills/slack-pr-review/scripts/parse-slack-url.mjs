@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Slack permalink → channel_id, message_ts
- * @example https://musinsa.slack.com/archives/C07L5MKSR16/p1779264244219899
+ * @example https://your-org.slack.com/archives/C0000000000/p1779264244219899
  */
 
 import { pathToFileURL } from 'node:url';

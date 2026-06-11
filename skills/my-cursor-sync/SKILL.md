@@ -10,7 +10,7 @@ disable-model-invocation: true
 
 # my-cursor sync (personal)
 
-**Repo:** https://github.com/changbaebang/my-cursor  
+**Repo:** https://github.com/your-github-user/my-cursor  
 **로컬 기본 경로:** `~/Codes/my-cursor` (또는 `MY_CURSOR_REPO` env)
 
 `~/.cursor` **전체**가 아니라 **공유 가능한 자산만** repo로 보낸다.
@@ -112,7 +112,7 @@ git push origin main
 ### 5. 다른 Mac / 동료
 
 ```bash
-git clone git@github.com:changbaebang/my-cursor.git ~/Codes/my-cursor
+git clone git@github.com:your-github-user/my-cursor.git ~/Codes/my-cursor
 cd ~/Codes/my-cursor && ./install.sh
 ```
 

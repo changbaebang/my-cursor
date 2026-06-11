@@ -3,7 +3,7 @@ command: '/cb:work-start'
 category: 'Git & Version Control'
 purpose: 'Jira 티켓 기준 작업 브랜치 생성·범위 검증·시작 체크리스트'
 description: >-
-  feat/M29CMCCF-{id}-{slug} 브랜치를 만들고 베이스·grep AC를 확인한다.
+  feat/PROJ-200-{slug} 브랜치를 만들고 베이스·grep AC를 확인한다.
   코드 구현은 사용자 지시 후 진행한다.
 argument-hint: '<jira-key> <branch-slug> [base-branch]'
 ---
@@ -20,6 +20,7 @@ Derived branch name:
 
 ```text
 feat/PROJ-200-legacy-shared-heart-api
+feat/PROJ-100-ph5-customer          # nav-migration Ph5 leaf
 ```
 
 Helper:
@@ -27,6 +28,15 @@ Helper:
 ```bash
 ~/.cursor/scripts/cb/branch-name.sh PROJ-200 legacy-shared-heart-api
 ```
+
+### Leaf naming (nav-migration Ph5+)
+
+```text
+feat/PROJ-100-ph5-{app-slug}
+```
+
+- **base:** Container 브랜치 (`feat/PROJ-100-ph5`), `main` 아님
+- **선행:** 이전 leaf PR squash merge → container `git pull` 완료 후 분기
 
 ## Preconditions
 
@@ -57,9 +67,11 @@ git checkout -b feat/PROJ-200-legacy-shared-heart-api
 
 Only run if user asked to create branch OR `/cb:work-start` explicitly includes "브랜치 만들어".
 
-### 3) Jira → In Progress (optional)
+### 3) Jira → In Progress
 
-Atlassian MCP `transitionJiraIssue` id `21` (Start) when user says to update Jira.
+사용자가 작업 시작·handoff 요청 시 `transitionJiraIssue` Start (`21`).
+
+이전 leaf가 `work-closeout`으로 Done이면 **같은 세션**에서 next 티켓 Start까지 이어감.
 
 ### 4) Scope grep (read-only)
 

@@ -1,9 +1,9 @@
 ---
 name: work-start
 description: >-
-  Creates feat/M29CMCCF-{id}-{slug} branch from epic/base, runs scope grep, and prints
-  start checklist. Use when the user runs /cb:work-start, asks 브랜치 만들어,
-  작업 시작, or starting a Jira subtask implementation.
+  Creates feat branch from container/epic base (incl. Ph5 leaf naming), pulls latest,
+  Jira In Progress, scope grep, start checklist. Use when the user runs /cb:work-start,
+  asks 브랜치 만들어, 작업 시작, 다음 티켓 시작, or after work-closeout handoff.
 disable-model-invocation: true
 ---
 

@@ -27,7 +27,7 @@ PR diff에 대해 아래를 검색한다. 매칭되면 **해당 파일 hunk**를
 
 ```bash
 node "$HOME/.cursor/skills/slack-pr-review/scripts/scan-diff-signals.mjs" \
-  --repo 29CM-Developers/frontend-29cm-platform --pr <N>
+  --repo your-org/frontend-monorepo --pr <N>
 ```
 
 **수동 (grep):**
@@ -58,7 +58,7 @@ git diff origin/main...HEAD -- '*.ts' '*.tsx' | grep -E '^[\+\-].*(!= null|mock|
 | `as ProductDetail` / valibot 스키마 | unknown key strip → CSR 데이터 소실 | V5/V6 둘 다 스키마에 필드 있는지 |
 | 링크·deeplink·`sort=` 변경 | QA·다른 팀이 모를 수 있음 | Slack **팀 공유 포인트** 후보 |
 
-## 패턴별 판단 메모 (29CM frontend)
+## 패턴별 판단 메모 (YourOrg frontend)
 
 ### `!= null` vs `!== null`
 

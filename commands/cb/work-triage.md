@@ -28,7 +28,7 @@ gh pr view <N> --json title,body,baseRefName,headRefName,files,commits
 gh pr diff <N> --stat
 
 # Jira면 (MCP)
-getJiraIssue M29CMCCF-xxxx
+getJiraIssue PROJ-200
 ```
 
 ## Step 2 — Classify (pick one primary, optional secondary)

@@ -165,14 +165,14 @@ Mozilla/5.0 (Linux; Android 14; Pixel 8 Pro Build/400) AppleWebKit/537.36 (KHTML
 
 ### CSS `webview:` variant (선택)
 
-`data-29cm-env=webview`는 Tailwind `webview:hidden` 등에 쓰인다.  
+`data-example-env=webview`는 Tailwind `webview:hidden` 등에 쓰인다.  
 `buildNumber≥700` Android는 `WebviewPolyfill`이 body 속성을 **주입하지 않음**(네이티브 위임). Browser Tab에서는 아래로 보완 가능:
 
 ```json
 {
   "method": "Runtime.evaluate",
   "params": {
-    "expression": "document.body.setAttribute('data-29cm-env', 'webview')"
+    "expression": "document.body.setAttribute('data-example-env', 'webview')"
   }
 }
 ```

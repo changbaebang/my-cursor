@@ -25,7 +25,7 @@ Slack / Confluence / Figma
    (코딩 · 커밋 · 푸시 · PR)
         ↓
    /cb:work-closeout   → Jira Done·다음 티켓
-   /cb:slack-review-request → #yourteam_team_frontend_pipeline 리뷰 요청
+   /cb:slack-review-request → #your-team-pipeline 리뷰 요청
    /cb:slack-pr-review      → 슬랙 스레드 링크 + PR diff 코드 리뷰 (:eyes: / :white_check_mark:)
    /cb:private-skill-init   → 개인 스킬을 비식별 private 경로로 생성/연결
    /cb:learn-radar           → ~/docs/learning-backlog (배울 것)

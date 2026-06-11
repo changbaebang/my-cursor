@@ -1,9 +1,10 @@
 ---
 name: work-closeout
 description: >-
-  Finishes a Jira work unit: git/AC check, push guidance, Jira Done, next ticket, and links
-  to /cb:pr-body and /cb:critical-review. Use when the user runs /cb:work-closeout,
-  asks 작업 마무리, Jira Done, or after merge what is next subtask.
+  Finishes a Jira work unit: leaf PR squash merge into container, git handoff, Jira Done
+  with Actual MD, next ticket Start, and links to /cb:pr-body and /cb:critical-review.
+  Use when the user runs /cb:work-closeout, asks 작업 마무리, PR 머지 후 다음 티켓,
+  Jira Done, or after merge what is next subtask.
 disable-model-invocation: true
 ---
 

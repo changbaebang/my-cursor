@@ -24,14 +24,14 @@
 
 ```bash
 node "$HOME/.cursor/skills/slack-pr-review/scripts/scan-diff-signals.mjs" \
-  --repo 29CM-Developers/frontend-29cm-platform --pr <N>
+  --repo your-org/frontend-monorepo --pr <N>
 ```
 
 ## 책임 분리 (팀 vs 개인)
 
 | 계층 | 위치 | PR 리뷰 |
 |------|------|---------|
-| 팀 | `frontend-29cm-platform` `.claude/skills` | 팀 표준만 — 개인 슬랙 워크플로 넣지 않음 |
+| 팀 | `frontend-monorepo` `.claude/skills` | 팀 표준만 — 개인 슬랙 워크플로 넣지 않음 |
 | 개인 | `~/.cursor` ↔ `my-cursor` | 본 맵의 스킬 |
 | Vendor | `~/.cursor/vendor/...` | `29CM-fe` `pr-review`, `code-reviewer` |
 
