@@ -17,7 +17,7 @@ argument-hint: '[ticket] [app] [pr-number]'
 1. **Phase 0** — `pages/` · `middleware.ts` · auth → path 화이트리스트 (runbook §2)
 2. **Phase 1** — spec 작성/수정 · `pnpm test:e2e` · gitignore 스크린샷
 3. **PR** — `gh-image` → 코멘트 · 본문 링크 (PNG 레포 커밋 X)
-4. **Phase 2** — §4 수동 시나리오 · `/cb:e2e-deployed-check` · 사용자 로그인
+4. **Phase 2** — **사용자 사전 안내**(Browser Tab·VPN·데이터) → 「로그인 완료」 대기 → runbook §4
 
 ## Related
 

@@ -28,6 +28,8 @@ Slash: **`/cb:e2e-deployed-check`**
 
 ## Preconditions
 
+**Browser 시작 전:** `playwright-qa-smoke/cursor-browser-prep.md` — Cursor Browser Tab 설정·로그인 핸드오프·「로그인 완료」 대기 (Playwright 아님).
+
 - **배포 완료** 확인 (브랜치/커밋/환경) — 배포 전 실행 금지
 - 플랜의 **SC-*** 시나리오 목록 확정 (`docs/qa/<TICKET>-e2e-plan-v1.md`)
 - 환경: **`nqa` 또는 `ndev`** (로컬 `ntest:3002` 아님)

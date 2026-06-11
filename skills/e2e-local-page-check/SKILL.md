@@ -29,6 +29,8 @@ Slash: **`/cb:e2e-local-page`**
 
 ## Preconditions
 
+**Browser 시작 전:** `playwright-qa-smoke/cursor-browser-prep.md` — Cursor Browser Tab 설정·로그인 핸드오프 (Playwright 아님).
+
 - `frontend-monorepo` — 검증 브랜치 checkout (예: 에픽 브랜치)
 - 인증서: `/cb:local-dev-mkcert` (`_certs/ntest.pem`, `ntest-key.pem`)
 - hosts: `127.0.0.1 local-dev.example.com`
