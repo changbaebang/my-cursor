@@ -88,6 +88,23 @@ pnpm test:e2e -- e2e/{app}/nav/tests/NN-*-smoke.spec.ts
 
 ---
 
+## Phase 1.5 — Runtime investigation (PR 없이 · Browser Tab 우선)
+
+**SSOT:** [investigation-runtime.md](investigation-runtime.md)
+
+Ph5 follow-up·hydration·404 **조사** (구현 전). Jira 코멘트에 매트릭스 표 → 완료 시 `jira-ticket-lifecycle` **워크플로 D**.
+
+```text
+/cb:local-dev-run-app <app> qa → Browser Tab (로그인 핸드오프) → Jira 코멘트
+→ /cb:local-dev-stop
+```
+
+- Playwright는 **교차검증** (비로그인 path만)
+- smoke URL: `e2e/_shared/nav-smoke.helpers.ts`
+- 구현 패턴: inbox 1417 · PR #7219
+
+---
+
 ## Phase 2 — Cursor Browser 수동 QA (Playwright 아님)
 
 runbook **§4** (M1~Mn). **Playwright로 하지 않는다.**

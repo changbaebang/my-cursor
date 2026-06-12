@@ -74,6 +74,14 @@ gh pr view <N> --json state,reviewDecision,baseRefName,url
 | 머지 전 릴리즈 리스크 | `/cb:critical-review <N>` |
 | 승인·머지 완료 후 | Jira Done |
 
+## Step 4b — Investigation → implementation split
+
+조사-only 티켓을 Done하고 구현 leaf를 새로 만든 경우 (`jira-ticket-lifecycle` 워크플로 D):
+
+- 조사 티켓: Actual MD = 조사 SP만 · 매트릭스 SSOT는 description 유지
+- 구현: **새 leaf**에 `/cb:work-start` · base `feat/PROJ-100-ph5` (Container)
+- Container [1406](https://jira.example.com/browse/PROJ-100) description §상태 갱신
+
 ## Step 5 — Leaf PR handoff (Container 브랜치 전략)
 
 Epic/Container 아래 **leaf PR**이 리뷰 완료된 경우 (예: Ph5 `1407` → base `1406-ph5`):
